@@ -26,7 +26,7 @@ ssip是“shadowsocks server install packet”的缩写，它是shadowsocks（�
 
 第3步：运行程序
 # cd /opt/ssip/
-# ./install 
+# ./install.sh 
 ```
 
 # SS客户端

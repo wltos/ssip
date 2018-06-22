@@ -1,44 +1,47 @@
-# ssip
-ssip是“shadowsocks server install packet”的缩写。顾名思义，它是ss线上部署的一键安装包。
+# 简介
+ssip是“shadowsocks server install packet”的缩写，它是shadowsocks（影梭，以下简称ss）的服务端一键安装包。本包附带windows，android，mac和iphone等主流平台的客户端程序文件。关于各客户端的程序文件，详见本包utils文件夹。作者制作本安装包的初衷是查阅科技文档，便于自己技术输入，请勿用于敏感场景。
 
-# Install
-注意:部署此服务之前，请确保自己拥有一台国外服务器。
-下载本项目并把它拷贝到国外主机的/opt/目录下，然后修改ss所在主机的ip地址，监听端口，密码，加密方法，超时设置等。如：
+# 准备工作
+1. 请确保自己拥有一台非中国大陆的ECS。推荐搬瓦工，亚马逊等境外云服务提供商；
+2. 下载本安装包，移动或复制到指定目录，如/opt目录（下面以/opt目录试验）；
 
-**1. 下载本项目**
+# 安装
 ```
-> git clone https://github.com/wltos/ssip.git
-> cp -r ssip /opt/
-> cd /opt/ssip
-```
-**2. 修改配置文件/opt/ss/config.json**
-```
-> vi /opt/ssip/config.json
+第1步：下载并解压安装包
+# cd /opt
+# git clone https://github.com/wltos/ssip.git
+
+第2步：修改配置文件
+# cp example.config.json config.json
+# vim /opt/ssip/etc/config.json
 {
-    "server":"44.55.66.77",
-    "server_port":443,
-    "local_port":1080,
-    "password":"871240671@qq.com",
-    "method": "aes-256-cfb",
-    "timeout":600,
-    "fast_open": false
+    "server":"11.22.33.44", //修改11.22.33.44为你的ECS公网IP
+    "server_port":443,      //推荐443,21,3306,27017等知名端口，防止被封
+    "local_port":1080,      //本地端口，默认就好
+    "password":"HelloWorld",//密码，可修改为自己喜欢的密码
+    "method": "aes-256-cfb",//加密方式，默认就好
+    "timeout":600,          //延时，默认就好
+    "fast_open": false      //默认就好
 }
-```
-**3. 部署服务端**
-```
-> sh install.sh
+
+第3步：运行程序
+# cd /opt/ssip/
+# ./install 
 ```
 
-# Usage
-如果你是ios用户，可以到AppStore中下载如下客户端。下载后，把/opt/ssip/config.json中的参数填入app中即可。
+# SS客户端
+下面以苹果手机为例，给大家推荐几款APP。使用的时候把“安装”标题中的config.json文件内容填入客户端中即可。在AppStore中，作者陆陆续续找到如下几款软件，可能有的已下架，请挨个自行尝试。
 
-|   app名字      | 是否收费 | 是否可用 | 
-| -----------    | :-       | :- | 
-| ShadowProxy    | 否       | 已下架 | 
-| FirstWingy     | 否       | 可用 | 
-| 超级穿山甲     | 否       | 可用 |
-| BestWingy      | 否       | 可用 |
-| ShadowPocket   | 否       | 可用 |
-| Kite           | 否       | 可用 |
-| SsrConnectPro  | 否       | 可用 |
-| Wingy          | 收费     | 可用 |
+|   APP名        | 是否收费 | 是否可用 |  验证时间  | 
+| -----------    | :-       | :-       | :-         |
+| ShadowProxy    | 免费     | 已下架   | 三个月前   |
+| FirstWingy     | 免费     | 可用     | 不详       |
+| SuperPangolin  | 免费     | 可用     | 2018-06-22 |
+| BestWingy      | 免费     | 可用     | 不详       |
+| ShadowPocket   | 免费     | 可用     | 不详       |
+| Kite           | 免费     | 可用     | 不详       |
+| SsrConnectPro  | 免费     | 可用     | 不详       |
+| Wingy          | 收费     | 可用     | 不详       |
+| SsrConnectPro  | 免费     | 可用     | 2018-06-22 |
+| ShadowBroken   | 免费     | 可用     | 2018-06-22 |
+

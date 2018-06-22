@@ -35,13 +35,13 @@ ssip是“shadowsocks server install packet”的缩写，它是shadowsocks（�
 |   APP名        | 是否收费 | 是否可用 |  验证时间  | 
 | -----------    | :-       | :-       | :-         |
 | ShadowProxy    | 免费     | 已下架   | 三个月前   |
-| FirstWingy     | 免费     | 可用     | 不详       |
+| FirstWingy     | 免费     | 可用     | 三个月前   |
 | SuperPangolin  | 免费     | 可用     | 2018-06-22 |
-| BestWingy      | 免费     | 可用     | 不详       |
-| ShadowPocket   | 免费     | 可用     | 不详       |
-| Kite           | 免费     | 可用     | 不详       |
-| SsrConnectPro  | 免费     | 可用     | 不详       |
-| Wingy          | 收费     | 可用     | 不详       |
+| BestWingy      | 免费     | 可用     | 三个月前   |
+| ShadowPocket   | 免费     | 可用     | 三个月前   |
+| Kite           | 免费     | 可用     | 三个月前   |
+| SsrConnectPro  | 免费     | 可用     | 三个月前   |
+| Wingy          | 收费     | 可用     | 三个月前   |
 | SsrConnectPro  | 免费     | 可用     | 2018-06-22 |
 | ShadowBroken   | 免费     | 可用     | 2018-06-22 |
 

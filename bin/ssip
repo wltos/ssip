@@ -1,0 +1,72 @@
+#!/usr/bin/env sh
+
+curPath=$(cd "$(dirname "$0")"; pwd)
+basePath=${curPath%/*}
+
+ssName="shadowsocks"
+guardName="guard_shadowsocks.py"
+insName="install.sh"
+
+# start conmmond
+function start()
+{
+    sh $basePath"/"$insName
+}
+
+function stop()
+{
+    guardpid=`ps -axu | grep $guardName | grep -v "grep" | awk '{ print $2 }'`
+    if [ $guardpid ];then
+        kill -9 $guardpid
+    fi
+
+    sspid=`ps -axu | grep $ssName | grep -v "grep" | awk '{ print $2 }'`
+    if [ $sspid ];then
+        kill -9 $sspid
+    fi
+}
+
+function restart()
+{
+    echo "reload"
+}
+
+function reload()
+{
+    echo "reload"
+}
+
+function help()
+{
+    echo "help"
+}
+
+function version()
+{
+    echo "version"
+}
+
+# main frame
+while getopts ":s:hv" opt
+do
+case $opt in
+	s ) if [[ $OPTARG == "start" ]];then
+            start
+        elif [[ $OPTARG == "stop" ]];then
+            stop
+        elif [[ $OPTARG == "reload" ]];then
+            reload
+        elif [[ $OPTARG == "restart" ]];then
+            restart
+        fi
+        exit;;
+	h ) help
+        exit;;
+	v ) version
+        exit;;
+      [?] ) help
+	    exit 1;;
+esac
+done
+
+help

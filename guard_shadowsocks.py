@@ -3,6 +3,6 @@ import os
 import time
 
 while True:
-    os.system("./shadowsocks -c config.json")
-    time.sleep(2)
+    os.system("./bin/shadowsocks -c ./etc/config.json")
+    time.sleep(3)
 

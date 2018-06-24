@@ -30,7 +30,7 @@ ssip是“shadowsocks server install packet”的缩写，它是shadowsocks（�
 # ./install.sh
 ```
 
-## 启动 | 停止
+# 启动 | 停止
 ```
 启动程序
 /opt/ssip/bin/ssip -s start

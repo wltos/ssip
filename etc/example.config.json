@@ -1,8 +1,8 @@
 {
-    "server":"127.0.0.1",
-    "server_port":1080,
+    "server":"11.22.33.44",
+    "server_port":443,
     "local_port":1080,
-    "password":"hellossip",
+    "password":"HelloWord",
     "method": "aes-256-cfb",
     "timeout":600,
     "fast_open": false

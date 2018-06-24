@@ -28,22 +28,24 @@ function stop()
 
 function restart()
 {
-    echo "reload"
+    sh $basePath"/"$insName
 }
 
 function reload()
 {
-    echo "reload"
+    sh $basePath"/"$insName
 }
 
 function help()
 {
-    echo "help"
+    echo "-s kill the signal.For example start,stop,reload,startt"
+    echo "-v print ssip version infomation"
+    echo "-h help"
 }
 
 function version()
 {
-    echo "version"
+    echo "ssip2.0"
 }
 
 # main frame

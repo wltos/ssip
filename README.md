@@ -2,8 +2,9 @@
 ssip是“shadowsocks server install packet”的缩写，它是shadowsocks（影梭，以下简称ss）的服务端一键安装包。本包附带windows，android，mac和iphone等主流平台的客户端程序文件。关于各客户端的程序文件，详见本包utils文件夹。
 
 # 准备工作
-1. 请确保自己拥有一台非中国大陆的ECS。推荐搬瓦工，亚马逊等境外云服务提供商；
-2. 下载本安装包，移动或复制到指定目录，如/opt目录（下面以/opt目录试验）；
+1. 请确保自己拥有一台非中国大陆的ECS。推荐搬瓦工，亚马逊等境外云主机；
+2. 如果设置shadowsocks的监听端口为443，请确保云主机的防火墙已放开443端口;
+3. 下载本安装包，移动或复制到指定目录，如/opt目录（下面以/opt目录试验）；
 
 # 安装
 ```
@@ -34,14 +35,14 @@ ssip是“shadowsocks server install packet”的缩写，它是shadowsocks（�
 
 |   APP名        | 是否收费 | 是否可用 |  验证时间  | 
 | -----------    | :-       | :-       | :-         |
-| ShadowProxy    | 免费     | 已下架   | 三个月前   |
-| FirstWingy     | 免费     | 可用     | 三个月前   |
+| ShadowProxy    | 免费     | 已下架   | 2018-03-29 |
+| FirstWingy     | 免费     | 可用     | 2018-03-29 |
 | SuperPangolin  | 免费     | 可用     | 2018-06-22 |
-| BestWingy      | 免费     | 可用     | 三个月前   |
-| ShadowPocket   | 免费     | 可用     | 三个月前   |
-| Kite           | 免费     | 可用     | 三个月前   |
-| SsrConnectPro  | 免费     | 可用     | 三个月前   |
-| Wingy          | 收费     | 可用     | 三个月前   |
+| BestWingy      | 免费     | 可用     | 2018-03-29 |
+| ShadowPocket   | 免费     | 可用     | 2018-03-29 |
+| Kite           | 免费     | 可用     | 2018-03-29 |
+| SsrConnectPro  | 免费     | 可用     | 2018-03-29 |
+| Wingy          | 收费     | 可用     | 2018-03-29 |
 | SsrConnectPro  | 免费     | 可用     | 2018-06-22 |
 | ShadowBroken   | 免费     | 可用     | 2018-06-22 |
 

@@ -1,5 +1,5 @@
 # 简介
-ssip是“shadowsocks server install packet”的缩写，它是shadowsocks（影梭，以下简称ss）的服务端一键安装包。本包附带windows，android，mac和iphone等主流平台的客户端程序文件。关于各客户端的程序文件，详见本包utils文件夹。作者制作本安装包的初衷是查阅科技文档，便于自己技术输入，请勿用于敏感场景。
+ssip是“shadowsocks server install packet”的缩写，它是shadowsocks（影梭，以下简称ss）的服务端一键安装包。本包附带windows，android，mac和iphone等主流平台的客户端程序文件。关于各客户端的程序文件，详见本包utils文件夹。
 
 # 准备工作
 1. 请确保自己拥有一台非中国大陆的ECS。推荐搬瓦工，亚马逊等境外云服务提供商；

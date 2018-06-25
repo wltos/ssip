@@ -12,18 +12,18 @@ installPath=$(cd "$(dirname "$0")"; pwd)
 iptables -F
 chmod +x /etc/rc.local
 chmod +x /etc/rc.d/rc.local
-sed -i "/guard_shadowsocks.py/d" /etc/rc.local
-sed -i "/guard_shadowsocks.py/d" /etc/rc.d/rc.local
-echo "cd /opt/ssip; /usr/bin/python ./bin/guard_shadowsocks.py &" >> /etc/rc.local
-echo "cd /opt/ssip; /usr/bin/python ./bin/guard_shadowsocks.py &" >> /etc/rc.d/rc.local
+sed -i "/$guardName/d" /etc/rc.local
+sed -i "/$guardName/d" /etc/rc.d/rc.local
+echo "cd $installPath; python $installPath/bin/$guardName &" >> /etc/rc.local
+echo "cd $installPath; python $installPath/bin/$guardName &" >> /etc/rc.d/rc.local
 
 # kill process
-guardpid=`ps -axu | grep "guard_shadowsocks.py" | grep -v "grep" | awk '{ print $2 }'`
+guardpid=`ps -axu | grep $guardName | grep -v "grep" | awk '{ print $2 }'`
 if [ $guardpid ];then
     kill -9 $guardpid
 fi
 
-sspid=`ps -axu | grep "shadowsocks" | grep -v "grep" | awk '{ print $2 }'`
+sspid=`ps -axu | grep $ssName | grep -v "grep" | awk '{ print $2 }'`
 if [ $sspid ];then
     kill -9 $sspid
 fi
